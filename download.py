@@ -10,7 +10,7 @@ from dateutil.relativedelta import relativedelta
 from bs4 import BeautifulSoup
 
 def scrape_url(year, month):
-    index_url = f"https://eogdata.mines.edu/nighttime_light/monthly/v10/{year}/{year}{month:02d}/vcmcfg/"
+    index_url = f"https://eogdata.mines.edu/nighttime_light/monthly/v10/{year}/{year}{month:02d}/vcmslcfg/"
     try:
         response = requests.get(index_url)
         if response.status_code != 200:
@@ -87,5 +87,5 @@ def download_and_process(start_year, start_month, end_year, end_month):
         current_date += relativedelta(months=1)
 
 # Usage
-download_and_process(2012, 4, 2023, 11)
+download_and_process(2020, 1, 2023, 11)
 
