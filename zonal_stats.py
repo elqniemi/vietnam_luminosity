@@ -52,8 +52,8 @@ def calculate_zonal_stats(raster_path, vector_path):
 
 def main():
     folder = './noncorrected/'  # Folder containing .tif files
-    vector_path = 'adm_level_3.gpkg'  # GPKG file for zones
-    output_gpkg = 'zonal_statistics_adm4.gpkg'  # Output GPKG file
+    vector_path = 'adm_level_province_1.gpkg'  # GPKG file for zones
+    output_gpkg = 'zonal_statistics_province.gpkg'  # Output GPKG file
 
     tif_files = get_tif_files(folder)
     zones = gpd.read_file(vector_path)
@@ -81,5 +81,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
